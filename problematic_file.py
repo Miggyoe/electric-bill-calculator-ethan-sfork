@@ -6,7 +6,7 @@ is_senior = input("Senior citizen? (yes/no): ")
 
 if consumption <= 100:
     rate = 9.00
-elif consumption < 200:
+elif consumption <= 200:
     rate = 11.00
 else:
     rate = 14.00
@@ -17,10 +17,18 @@ if is_senior == "yes":
     discount = total * 0.05
     total = total - discount
     print(f"Senior discount applied:{discount} ₱" )
-
-print(f"----- ELECTRIC BILL -----")
-print(f"Name: {name}")
-print(f"Consumption: {consumption} kWh")
-print(f"Rate applied: ₱ {rate} /kWh")
-print(f"Total Due: ₱{total}")
+    print(f"----- ELECTRIC BILL -----")
+    print(f"Name: {name}")
+    print(f"Consumption: {consumption} kWh")
+    print(f"Rate applied: ₱ {rate} /kWh")
+    print(f"Total Due: ₱{total}")
+elif is_senior == "no":
+    print(f"----- ELECTRIC BILL -----")
+    print(f"Name: {name}")
+    print(f"Consumption: {consumption} kWh")
+    print(f"Rate applied: ₱ {rate} /kWh")
+    print(f"Total Due: ₱{total}")
+else:
+    print("Invalid")
+    
 
